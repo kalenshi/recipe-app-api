@@ -43,8 +43,12 @@ class UserModelTest(TestCase):
         Test creating a user without email raises a ValueError
         """
         with self.assertRaises(ValueError) as ve:
-            _ = get_user_model().objects.create_user(email="", password="password123")
-        self.assertEqual(str(ve.exception), "Email must be provided for all users.")
+            _ = get_user_model().objects.create_user(
+                email="", password="password123"
+            )
+        self.assertEqual(
+            str(ve.exception), "Email must be provided for all users."
+        )
 
     def test_create_superuser(self):
         """
