@@ -3,7 +3,11 @@ This module contains the default user model
 """
 
 from django.db import models
-from django.contrib.auth.models import BaseUserManager, AbstractBaseUser, PermissionsMixin
+from django.contrib.auth.models import (
+    BaseUserManager,
+    AbstractBaseUser,
+    PermissionsMixin
+)
 
 
 class UserManager(BaseUserManager):
